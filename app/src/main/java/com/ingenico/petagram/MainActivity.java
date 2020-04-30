@@ -5,11 +5,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 
 import androidx.appcompat.widget.Toolbar;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.incActionbar);
+        Toolbar toolbar = findViewById(R.id.incActionbar);
         setSupportActionBar(toolbar);
 
-        contactList = (RecyclerView)findViewById(R.id.rcvContacts);
+        contactList = findViewById(R.id.rcvContacts);
 
         //Define form to show recyclerView
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void InitContactList(){
-        pets = new ArrayList<Pet>();
+        pets = new ArrayList<>();
 
         pets.add(new Pet("Eyes", 0, R.drawable.cateyes));
         pets.add(new Pet("Fight", 0, R.drawable.catfight));
@@ -65,6 +66,14 @@ public class MainActivity extends AppCompatActivity {
         Bundle args = new Bundle();
         args.putSerializable(getString(R.string.ppets), pets);
         intent.putExtra(getString(R.string.pbundle),args);
+
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_menu, menu);
+        return true;
     }
 }

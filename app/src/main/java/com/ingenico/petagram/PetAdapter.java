@@ -1,12 +1,13 @@
 package com.ingenico.petagram;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -43,13 +44,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ContactViewHolde
         contactViewHolder.imgContactPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(activity, contact.getName(), Toast.LENGTH_SHORT).show();
-//                Snackbar.make(v, pet.getName(), Snackbar.LENGTH_SHORT).show();
-//                Intent intent = new Intent(activity, PetHistorical.class);
-//                intent.putExtra(activity.getResources().getString(R.string.pname), pet.getName());
-//                intent.putExtra(activity.getResources().getString(R.string.prating), pet.getRating());
-//                intent.putExtra(activity.getResources().getString(R.string.pimage), pet.getPhoto());
-//                activity.startActivity(intent);
+                Snackbar.make(v, pet.getName(), Snackbar.LENGTH_SHORT).show();
             }
         });
 

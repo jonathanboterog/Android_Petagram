@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.ingenico.petagram.PetHistorical"
-            android:parentActivityName="com.ingenico.petagram.MainActivity">
+            android:parentActivityName=".MainActivity">
             <!--support for version below 4.0-->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

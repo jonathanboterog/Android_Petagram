@@ -37,7 +37,8 @@
                 android:layout_height="40dp"
                 android:src="@drawable/like_64"
                 android:layout_margin="10dp"
-                android:layout_weight="0.1"/>
+                android:layout_weight="0.1"
+                android:contentDescription="@string/image"/>
 
             <TextView
                 android:id="@+id/tvName"
@@ -45,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/name"
                 android:layout_gravity="center_vertical"
-                android:gravity="left"
+                android:gravity="start"
                 android:textSize="@dimen/cardview_name_fontsize"
                 android:textStyle="bold"
                 android:layout_weight="0.4"/>
@@ -56,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/rating"
                 android:layout_gravity="center_vertical"
-                android:gravity="right"
+                android:gravity="end"
                 android:textSize="@dimen/cardview_name_fontsize"
                 android:textStyle="bold"
                 android:layout_weight="0.4"/>
@@ -66,7 +67,8 @@
                 android:layout_height="40dp"
                 android:src="@drawable/likecount_64"
                 android:layout_margin="10dp"
-                android:layout_weight="0.1"/>
+                android:layout_weight="0.1"
+                android:contentDescription="@string/image"/>
 
         </LinearLayout>
 
