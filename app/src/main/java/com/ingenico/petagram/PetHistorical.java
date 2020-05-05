@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.ingenico.petagram.pojo.Pet;
+
 import java.util.ArrayList;
 
 public class PetHistorical extends AppCompatActivity {
@@ -21,7 +23,7 @@ public class PetHistorical extends AppCompatActivity {
 
         setContentView(R.layout.activity_pet_info);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.incActionbar);
+        Toolbar toolbar = findViewById(R.id.incActionbarInfo);
         RelativeLayout lyStar = findViewById(R.id.lyStar);
         lyStar.setVisibility(View.INVISIBLE);
 
@@ -30,7 +32,8 @@ public class PetHistorical extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle args = intent.getBundleExtra(getString(R.string.pbundle));
-        pets = (ArrayList<Pet>)  args.getSerializable(getString(R.string.ppets));
+        if(args != null)
+            pets = (ArrayList<Pet>)  args.getSerializable(getString(R.string.ppets));
     }
 
     @Override

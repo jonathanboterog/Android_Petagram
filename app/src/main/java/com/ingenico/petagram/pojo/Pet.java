@@ -1,4 +1,4 @@
-package com.ingenico.petagram;
+package com.ingenico.petagram.pojo;
 
 import java.io.Serializable;
 

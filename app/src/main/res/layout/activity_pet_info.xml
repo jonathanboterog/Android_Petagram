@@ -6,7 +6,7 @@
     tools:context=".PetHistorical">
 
     <include
-        android:id="@+id/incActionbar"
+        android:id="@+id/incActionbarInfo"
         layout="@layout/actionbar">
     </include>
 
