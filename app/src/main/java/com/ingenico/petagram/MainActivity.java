@@ -42,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
 
         lyStar = findViewById(R.id.lyStar);
+        lyStar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), PetHistorical.class);
+                startActivity(intent);
+            }
+        });
 
         SetUpViewPager();
     }
@@ -91,14 +98,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-    public void ClickStar(View view) {
-        Intent intent = new Intent(this, PetHistorical.class);
-
-//        Bundle args = new Bundle();
-//        args.putSerializable(getString(R.string.ppets), pets);
-//        intent.putExtra(getString(R.string.pbundle),args);
-
-        startActivity(intent);
-    }
 }
