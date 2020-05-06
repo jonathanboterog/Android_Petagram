@@ -1,2 +1,2 @@
 rootProject.name='RecyclerViewDemo'
-include ':app'
+include ':app', ':mail'

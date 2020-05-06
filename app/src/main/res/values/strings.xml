@@ -13,6 +13,15 @@
     <string name="ppets">Mascotas</string>
     <string name="pbundle">Bundle</string>
 
+    <string name="form_name">Nombre completo</string>
+    <string name="form_email">Email</string>
+    <string name="form_message">Mensaje</string>
+    <string name="bt_send">Enviar mensaje</string>
+
+    <string name="about_developer">Petagram by: Jonathan Botero Gomez</string>
+    <string name="about_support">soporte: jonathanboterog@gmail.com</string>
+    <string name="about_version">v1.0.0</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

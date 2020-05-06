@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ingenico.petagram">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,15 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ingenico.petagram.PetHistorical"
+        <activity android:name=".OptionMenu.About"
             android:parentActivityName=".MainActivity">
-            <!--support for version below 4.0-->
+            <!-- support for version below 4.0 -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.ingenico.petagram.MainActivity">
-            </meta-data>
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name="com.ingenico.petagram.MainActivity">
+        <activity android:name=".OptionMenu.ContactForm">
+
+        </activity>
+        <activity
+            android:name=".PetHistorical"
+            android:parentActivityName=".MainActivity">
+
+            <!-- support for version below 4.0 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

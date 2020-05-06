@@ -2,11 +2,9 @@ package com.ingenico.petagram;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -15,6 +13,8 @@ import android.widget.RelativeLayout;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
+import com.ingenico.petagram.OptionMenu.About;
+import com.ingenico.petagram.OptionMenu.ContactForm;
 import com.ingenico.petagram.adapter.PageAdapter;
 import com.ingenico.petagram.fragment.ProfileFragment;
 import com.ingenico.petagram.fragment.RecyclerViewFragment;
@@ -74,16 +74,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
+        Intent intent;
+
         switch(item.getItemId()){
 
             case R.id.action_contact:
-                Snackbar.make(getWindow().getDecorView().findViewById(android.R.id.content),
-                        R.string.contact, Snackbar.LENGTH_SHORT).show();
+                intent = new Intent(this, ContactForm.class);
+                startActivity(intent);
                 break;
 
             case R.id.action_about:
-                Snackbar.make(getWindow().getDecorView().findViewById(android.R.id.content),
-                        R.string.about, Snackbar.LENGTH_SHORT).show();
+                intent = new Intent(this, About.class);
+                startActivity(intent);
                 break;
         }
 
