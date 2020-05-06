@@ -7,7 +7,6 @@
     android:background="@color/colorPrimary"
     android:elevation="@dimen/elev_addbar"
     android:theme="@style/ToolBarStyle"
-    app:layout_collapseMode="pin"
     app:contentInsetStart="0dp"
     app:contentInsetEnd="0dp">
 

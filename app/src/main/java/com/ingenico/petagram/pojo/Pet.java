@@ -14,6 +14,11 @@ public class Pet implements Serializable {
         this.photo = photo;
     }
 
+    public Pet(int rating, int photo) {
+        this.rating = rating;
+        this.photo = photo;
+    }
+
     public String getName() {
         return name;
     }

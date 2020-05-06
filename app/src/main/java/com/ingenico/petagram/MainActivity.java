@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
 
         lyStar = findViewById(R.id.lyStar);
-        //registerForContextMenu(lyStar);
 
         SetUpViewPager();
     }
