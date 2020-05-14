@@ -7,9 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.ingenico.petagram.R;
-import com.ingenico.petagram.pojo.Pet;
+import com.ingenico.petagram.model.Pet;
 
 import java.util.ArrayList;
 

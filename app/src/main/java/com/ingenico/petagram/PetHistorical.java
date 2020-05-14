@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.ingenico.petagram.pojo.Pet;
+import com.ingenico.petagram.model.Pet;
 
 import java.util.ArrayList;
 

@@ -1,9 +1,10 @@
-package com.ingenico.petagram.pojo;
+package com.ingenico.petagram.model;
 
 import java.io.Serializable;
 
 public class Pet implements Serializable {
 
+    private int id;
     private String name;
     private int rating;
     private int photo;
@@ -17,6 +18,9 @@ public class Pet implements Serializable {
     public Pet(int rating, int photo) {
         this.rating = rating;
         this.photo = photo;
+    }
+
+    public Pet() {
     }
 
     public String getName() {
@@ -41,5 +45,13 @@ public class Pet implements Serializable {
 
     public void setPhoto(int photo) {
         this.photo = photo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

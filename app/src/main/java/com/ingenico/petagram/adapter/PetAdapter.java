@@ -6,10 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.ingenico.petagram.pojo.Pet;
+import com.ingenico.petagram.model.Pet;
 import com.ingenico.petagram.R;
+import com.ingenico.petagram.model.PetConstructor;
 
 import java.util.ArrayList;
 
@@ -53,8 +55,17 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ContactViewHolde
         contactViewHolder.imgLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pet.setRating(pet.getRating() + 1);
-                contactViewHolder.tvRating.setText(String.valueOf(pet.getRating()));
+
+                Toast.makeText(activity, "Rating to " + pet.getName(),
+                        Toast.LENGTH_SHORT).show();
+
+                PetConstructor petConstructor = new PetConstructor(activity);
+                petConstructor.setRatingPet(pet);
+                contactViewHolder.tvRating.setText(String.valueOf(petConstructor.getRatingPet(pet)));
+//                contactViewHolder.tvRating.setText(petConstructor.getRatingPet(pet) + " " + activity.getString(R.string.rating));
+//
+//                pet.setRating(pet.getRating() + 1);
+//                contactViewHolder.tvRating.setText(String.valueOf(pet.getRating()));
             }
         });
     }

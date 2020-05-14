@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -14,9 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ingenico.petagram.R;
-import com.ingenico.petagram.adapter.PetAdapter;
 import com.ingenico.petagram.adapter.PetProfileAdapter;
-import com.ingenico.petagram.pojo.Pet;
+import com.ingenico.petagram.model.Pet;
 
 import java.util.ArrayList;
 
